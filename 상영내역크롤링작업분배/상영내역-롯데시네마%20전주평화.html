@@ -1,0 +1,78 @@
+
+
+
+<html>
+<head>
+<title>KOFIC 영화관 입장권 통합전산망</title>
+<!--[if IE]>
+<script src="/kobis/web/comm/commjs/html5shiv.js"></script>
+<![endif]-->
+<style type="text/css">
+.lpop03 {position:relative;;margin:0 auto;margin-top:8em;}
+.nonpageMid {background:url(/kobis/web/comm/images/comm/page_error.jpg) no-repeat; max-width:65em; text-align:center;background-position-y:6em;background-position-x:center;margin:0 auto;background-color:#fff;}
+.logo {background:url(/kobis/web/comm/images/comm/logo_comm.png) no-repeat;  text-align:center;background-position-x:center;border-top:1em solid #5076db;padding-top:2em;background-position-y: 1em;}
+.nonpageMid .npbox .toptit {padding:27px 19px 0 0;text-align:right;}
+.nonpageMid .npbox .scbox {margin:0 auto; padding:2em 1em;max-width:42em;height:3em;line-height:18px;
+text-align:center;overflow-y:scroll;border:none;border-top:2px solid #eaeaea;border-bottom:2px solid #eaeaea;border-left:2px solid #eaeaea; position: relative;top:16em;}
+.btn_area02 {padding:2em 2em;text-align:center;margin-top:16em;}
+.btn_area02 .btn_blue{padding:5px 10px;width:70px;}
+.btn_area02 .btn_gray{padding:5px 10px;width:70px;}
+</style>
+
+<link rel="stylesheet" type="text/css" href="/kobis/web/comm/commcss/common.css" />
+<link rel="stylesheet" type="text/css" href="/kobis/web/comm/commcss/cont.css" />
+<script type="text/javascript" src="/kobis/web/comm/commjs/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="/kobis/web/comm/commjs/jquery-ui-1.12.1.min.js"></script>
+<script type="text/javascript" src="/kobis/web/comm/commjs//jquery.bxslider.js"></script>
+<script type="text/javascript" src="/kobis/web/comm/commjs//kobis.js"></script>
+<script type="text/javascript" src="/kobis/web/comm/commjs//jquery.placeholder.js"></script>
+
+<!-- nonpagepopup script -->
+
+
+<script>
+	$(document).ready(function(){
+		document.getElementById("wrap_layer03").style.display="block";
+		bodybg = document.documentElement.clientHeight;
+	});
+
+	function closeErrPop(){
+		if($("#errorCode").val() =="99"){
+			
+				location.href="/kobis/business/comm/user/openLogin.do";
+			
+		}
+		else history.go(-1);
+	}
+</script>
+
+</head>
+	<body>
+<div class="dimm" style="height:1024px; z-index:-999;"></div>
+
+<section id="wrap_layer03">
+	<div class="lpop03">
+		<div class="nonpageTop"></div>
+		<div class="nonpageMid">
+			<div class="npbox logo">
+				<div class="scbox">
+					<div>
+						시스템 오류가 발생하였습니다.<br/>
+						시스템 관리자에게 문의하세요.
+					</div>
+				</div>
+
+				<p class="btn_area02" style="vertical-align:center">
+					<a href="/kobis/business/main/main.do"class="btn_blue">메인으로</a>
+					<a href="#none" onClick="history.back();"  class="btn_gray">이전페이지</a>
+				</p>
+			</div>
+		</div>
+		
+	</div>
+</section>
+
+		<input type="hidden" id="errorMessage" value="시스템 오류가 발생했습니다. 오류코드 ORA-00028로 관리자에게 문의하세요."/ >
+		<input type="hidden" id="errorCode" value=""/ >
+	</body>
+</html>
